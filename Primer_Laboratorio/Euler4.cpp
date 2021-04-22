@@ -40,7 +40,6 @@ long PalindromoMayor(long limA, long limB)
 
 int main()
 {
-    long n = 41541;
     cout << PalindromoMayor(999,999) << endl;
     return 1;
 }
