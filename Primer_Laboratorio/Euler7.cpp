@@ -8,7 +8,7 @@ bool primo(unsigned long num)
             return false;
     return true;
 }
-unsigned long BuscarPrimo(int orden)
+long BuscarPrimo(int orden)
 {
     unsigned long i = 1;
     int p=0; 

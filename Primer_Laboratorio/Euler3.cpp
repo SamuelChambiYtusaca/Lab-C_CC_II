@@ -1,20 +1,12 @@
 #include<iostream>
 using namespace std;
-bool primo(unsigned long num)
-{
-    int co = 0;
-    for (int i = 2; i < num; i++)
-        if(num%i==0)
-            return false;
-    return true;
-}
-long FactorMayor(long long numero)
+long FactorMayor(unsigned long numero)
 {
     int i = 2;
-    while ((i * i)<= numero)
+    while ((i * i)<= numero)//Comprueba si es que ya se llego al ultimo factor
     {
         if(numero%i == 0)
-            numero/=i;
+            numero/=i;//Se utiliza un mismo dividendo miestras sea posible la division exacta
         else
             i++;
     }
@@ -22,7 +14,6 @@ long FactorMayor(long long numero)
 }
 int main()
 {
-    //Problema 3
     cout << FactorMayor(600851475143)<< endl;
     return 0;
 }
