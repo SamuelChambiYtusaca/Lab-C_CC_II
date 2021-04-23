@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 long sumC(int limite)
-{
+{//Suma del cuadrado de cada elemento
     long sum = 0;
     for (int i = 1; i <= limite ; i++)
     {   
@@ -11,7 +11,7 @@ long sumC(int limite)
 }
 
 long long CuaSum(int limite)
-{
+{//Cuadrado de la suma de los elementos
     long long sum = 0;
     for (int i = 1; i <= limite; i++)
         sum+=i;

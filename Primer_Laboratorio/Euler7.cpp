@@ -15,7 +15,7 @@ long BuscarPrimo(int orden)
     while(true)
     {
         if(primo(i))
-            p++;
+            p++;//Cuenta el numero de primos registrados
         if(p == orden+1)
             return i;
         i++;

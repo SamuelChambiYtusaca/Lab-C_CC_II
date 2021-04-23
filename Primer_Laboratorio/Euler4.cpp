@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 long voltear(long n)
-{
+{//Invierte el numero
     long nuevo = 0;
     long aux;
     while (n>0)
