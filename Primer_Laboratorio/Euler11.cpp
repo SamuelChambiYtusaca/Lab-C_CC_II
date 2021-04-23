@@ -116,5 +116,5 @@ int main()
     int **mat,fi=0,col=0;
     mat = leerMtz("Matriz.txt",fi,col);
     cout << productoM(mat,fi,col) << endl;
-    return 0;
+    return 1;
 }

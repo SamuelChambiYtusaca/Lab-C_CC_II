@@ -10,13 +10,13 @@ bool primo(unsigned long num)
 }
 long BuscarPrimo(int orden)
 {
-    unsigned long i = 1;
+    unsigned long i = 2;
     int p=0; 
     while(true)
     {
         if(primo(i))
             p++;//Cuenta el numero de primos registrados
-        if(p == orden+1)
+        if(p == orden)
             return i;
         i++;
     }
