@@ -16,10 +16,10 @@ int NDivisores(unsigned long long n)
     int num=1;
     unsigned long long divisor=2,exponente;
     while(n>1)
-    {
+    {//Mientras el numero sea valido
         exponente = 0;
         while(n%divisor==0)
-        {
+        {//Numero de incidencias de un mismo divisor
             n/=divisor;
             exponente++;
         }
@@ -35,11 +35,10 @@ unsigned long long NumeroTriangularM(int numD)
     {
         numero = NumeroTriangular(i);
         if(NDivisores(numero)>numD)
-            return numero;
+            return numero;//Cuando halle el primer numero con la cantidad de Div requerida retorna el numero
         i++;
     }
 }
-
 int main()
 {
     cout << NumeroTriangularM(500);

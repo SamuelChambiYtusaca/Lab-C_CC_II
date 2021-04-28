@@ -35,6 +35,6 @@ int main()
     cout << "Ingrese dimension de la malla: "; cin >> dimension;
     unsigned long long** redF= red(dimension);
     cout << "Numero de caminos diferentes encontrados: " << NCaminos(redF,dimension) << endl;
-    imprimirMalla(dimension,redF);
+    //imprimirMalla(dimension,redF);
     return 1;
 }

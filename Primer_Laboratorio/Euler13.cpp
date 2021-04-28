@@ -5,34 +5,33 @@ using namespace std;
 
 long long Str_a_LongLong(string n)
 {//Convierte un string a un numero Long Long
-    int tam = n.size();//Limite del tamaño del string
     long long numero=0;//Valor inicial
-    for (int i = 0; i < tam; i++)
+    for (int i = 0; i < n.size(); i++)
     {
-        numero*=10;//Incrementa los digitos hacia la izquierda
+        numero *= 10;//Incrementa los digitos hacia la izquierda
         char digito = n[i];
         numero += atoi(&digito);
     }
     return numero;
 }
 
-long long SumaN(string* numeros, int tam)
+long long SumaN(string numeros[], int tam)
 {//Recibe los numeros y la cantidad de numeros 
-    long long suma=0, auxiliar=0; 
+    long long suma=0, sumFinales=0; 
     while(numeros[99].size()>9)
     {//Hasta que llegue a los 10 digitos finales
         for(int x=0;x<tam;x++)
         {
             char n = numeros[x].back();//Obtiene los ultimos digitos
-            auxiliar += atoi(&n);//Los suma
+            sumFinales += atoi(&n);//Los suma
             numeros[x].pop_back();//Elimina los ultimos digitos ya utilizados
         }
-        auxiliar/=10;//Solo se toma en cuenta lo que se lleva de la operacion
+        sumFinales/=10;//Solo se toma en cuenta lo que se lleva de la operacion
     }
     for (int j = 0; j < tam; j++){
         suma += Str_a_LongLong(numeros[j]);//Suma los numeros con los 10 ultimos digitos ya establecidos
     }
-    suma+=auxiliar;//Se le agrega lo que corresponde a la llevada
+    suma+=sumFinales;//Se le agrega lo que corresponde a la llevada
     return suma;
 }
 
