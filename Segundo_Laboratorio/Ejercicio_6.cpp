@@ -3,7 +3,7 @@
 #include<fstream>
 using namespace std;
 
-void leertxt(char* nombre, int tam, string *&arr){
+void leertxt(char *nombre, int tam, string *&arr){
     arr = new string[tam];
     string aux;
     int i = 0;

@@ -5,7 +5,7 @@ using namespace std;
 void crearArr(int *&arr, int cant){
     arr = new int[cant];//Crea el arreglo con numeros aleatorios del 1 al 8000
     for(int i = 0;i<cant;i++)
-        arr[i]=1+rand()%(8001-1);
+        arr[i]=100000+rand()%(1100000-1);
 }
 
 void quicksort(int *&a,int inicio,int final)
