@@ -1,6 +1,5 @@
 #ifndef __EMPLEADO_H__
 #define __EMPLEADO_H__
-
 #include <bits/stdc++.h>
 class Person {
     private:
@@ -21,12 +20,11 @@ class Person {
         void setId(int id) {
             this->id = id;
         }
-        friend std::ostream& operator<<(std::ostream &out, const Person &p){
-                out << "Id: "<< p.id << "\t"; 
-                out << "Nombre: " << p.name;
-                return out;
-        }
-
-
+        friend std::ostream& operator<<(std::ostream &out, const Person &p);
 };
+std::ostream& operator<<(std::ostream &out, const Person &p){
+        out << "Id: "<< p.id << "\t"; 
+        out << "Nombre: " << p.name;
+        return out;      
+}
 #endif

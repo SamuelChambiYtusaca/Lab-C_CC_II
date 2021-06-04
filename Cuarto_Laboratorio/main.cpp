@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 #include "DynamicArray.h"
+#include "Person.h"
 #include "Jugador.h"
 using namespace std;
+
 int main(){
     Jugador j1("Paolo Guerrero",9,"Peru","Delantero");
     Jugador j2("Jose Olaya",99,"Brasil","Defensa");
@@ -19,8 +21,8 @@ int main(){
         p.push_back(arr[i]);
     }
     cout << "<----------- Personas ------------>\n";
-    arr1.print();
+    cout << arr1 << "\n";
     cout << "<----------- Jugadores ------------>\n";
-    p.print();
+    cout << p << "\n";
     return 0;
 }

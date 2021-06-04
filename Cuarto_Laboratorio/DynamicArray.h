@@ -1,15 +1,16 @@
 #ifndef __DYNAMICARRAY_H__
 #define __DYNAMICARRAY_H__
-
+#include<bits/stdc++.h>
 #include "Person.h"
+#include "Jugador.h"
 
 template <typename T>
 class DynamicArray {
     private:
         int size;
-        T *arr;
         void resize(int newSize);
     public:
+        T *arr;
         DynamicArray();
         DynamicArray(const T arr[], int size);
         DynamicArray(const DynamicArray &o);
@@ -19,10 +20,9 @@ class DynamicArray {
         // TODO Implementar
         void insert(T elem, int pos);
         void remove(int pos);
-
         void clear();
-
         int getSize() const;
+        friend std::ostream& operator<<(std::ostream &salida,DynamicArray<T>*p);
         ~DynamicArray();
 };
 
@@ -92,24 +92,30 @@ template <typename T>
 void DynamicArray<T>::clear() {
     resize(0);
 }
-
+/*
 template <typename T>
 void DynamicArray<T>::print(){
     for(int x = 0;x<size; x++){
         std::cout << "[ " << arr[x] << " ]\n";
     }
 }
-
+*/
 template <typename T>
 int DynamicArray<T>::getSize() const {
     return size;
 }
 
 template <typename T>
+std::ostream& operator<<(std::ostream &out, DynamicArray<T>p){
+        for(int i=0;i<p.getSize();i++){
+            out << "["<< p.arr[i] << "]"<< "\n";
+        }
+        return out;      
+}
+
+template <typename T>
 DynamicArray<T>::~DynamicArray() {
     delete [] arr;
 }
-
-
 
 #endif

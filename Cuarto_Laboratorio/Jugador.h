@@ -22,13 +22,7 @@ class Jugador {
         void setEquipo(std::string _equipo);
         void setNombre(std::string _nombre);
         void setPosicion(std::string _posicion);
-        friend std::ostream& operator<<(std::ostream &out, const Jugador &p){
-                out << "Numero: "<< p.numero << "\t"; 
-                out << "Nombre: "<< p.nombre << "\t";
-                out << "Equipo: " << p.equipo << "\t";
-                out << "Posicion: " << p.posicion;
-                return out;
-        }
+        friend std::ostream& operator<<(std::ostream &out, const Jugador &p);
         ~Jugador();
 };
 // Implementaciones
@@ -74,6 +68,14 @@ void Jugador::setEquipo(std::string _equipo) {
 }
 void Jugador::setPosicion(std::string _posicion) {
     this->posicion=_posicion;
+}
+
+std::ostream& operator<<(std::ostream &out, const Jugador &p){
+    out << "Numero: "<< p.numero << "\t"; 
+    out << "Nombre: "<< p.nombre << "\t";
+    out << "Equipo: " << p.equipo << "\t";
+    out << "Posicion: " << p.posicion;
+    return out;
 }
 
 #endif
