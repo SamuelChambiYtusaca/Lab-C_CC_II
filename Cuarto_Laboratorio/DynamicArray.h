@@ -1,28 +1,32 @@
 #ifndef __DYNAMICARRAY_H__
 #define __DYNAMICARRAY_H__
 #include<bits/stdc++.h>
-#include "Person.h"
-#include "Jugador.h"
+// #include "Person.h"
+// #include "Jugador.h"
+template <typename T>
+class DynamicArray;
+
+template <typename T>
+std::ostream& operator<<(std::ostream &out, DynamicArray<T>p);
 
 template <typename T>
 class DynamicArray {
     private:
         int size;
+        T *arr;
         void resize(int newSize);
     public:
-        T *arr;
         DynamicArray();
         DynamicArray(const T arr[], int size);
         DynamicArray(const DynamicArray &o);
         void print();
         void push_back(T elem);
-        
         // TODO Implementar
         void insert(T elem, int pos);
         void remove(int pos);
         void clear();
         int getSize() const;
-        friend std::ostream& operator<<(std::ostream &salida,DynamicArray<T>*p);
+        friend std::ostream& operator<< <>(std::ostream &salida,DynamicArray<T>p);
         ~DynamicArray();
 };
 
@@ -67,8 +71,6 @@ void DynamicArray<T>::push_back(T elem) {
     arr[size - 1] = elem;
 }
 
-// Jenny
-//insert: recibe el elemento Person y lo inserta en la pos dada
 template <typename T>
 void DynamicArray<T>::insert(T elem, int pos)
 {

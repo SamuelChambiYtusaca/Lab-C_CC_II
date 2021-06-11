@@ -23,8 +23,8 @@ class Person {
         friend std::ostream& operator<<(std::ostream &out, const Person &p);
 };
 std::ostream& operator<<(std::ostream &out, const Person &p){
-        out << "Id: "<< p.id << "\t"; 
-        out << "Nombre: " << p.name;
+        out << "Id: "<< p.getId() << "\t"; 
+        out << "Nombre: " << p.getName();
         return out;      
 }
 #endif

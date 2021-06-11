@@ -20,9 +20,9 @@ int main(){
     for(int i=0;i<tam;i++){
         p.push_back(arr[i]);
     }
-    cout << "<----------- Personas ------------>\n";
-    cout << arr1 << "\n";
-    cout << "<----------- Jugadores ------------>\n";
-    cout << p << "\n";
+    cout << "<----------- Personas ------------>\n"
+         << arr1 << "\n"
+         << "<----------- Jugadores ------------>\n"
+         << p << "\n";
     return 0;
 }

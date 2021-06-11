@@ -71,10 +71,10 @@ void Jugador::setPosicion(std::string _posicion) {
 }
 
 std::ostream& operator<<(std::ostream &out, const Jugador &p){
-    out << "Numero: "<< p.numero << "\t"; 
-    out << "Nombre: "<< p.nombre << "\t";
-    out << "Equipo: " << p.equipo << "\t";
-    out << "Posicion: " << p.posicion;
+    out << "Numero: "<< p.getNumero() << "\t"; 
+    out << "Nombre: "<< p.getNombre() << "\t";
+    out << "Equipo: " << p.getEquipo() << "\t";
+    out << "Posicion: " << p.getPosicion();
     return out;
 }
 
